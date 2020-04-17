@@ -1,1 +1,1 @@
-// hihihiihi
+document.write("<p> hohoho </p>");
