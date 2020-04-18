@@ -15,7 +15,8 @@ function Question() {
     document.getElementById("next").style.display = "none";
     var content
     if (currentQuestion < words.length) {
-        var question = "<p class='h4'> Guess the french word for " + words[currentQuestion].english + "</p>";
+        var question = "<p class='h4'> Guess the french word for " +
+            words[currentQuestion].english + "</p>";
         var option_one = "<div id='options'><button class='btn btn-primary' onclick='Answer(0)'>" +
             words[currentQuestion].french_options[0] + "</button> ";
         var option_two = "<button class='btn btn-primary' onclick='Answer(1)'> " +
@@ -41,7 +42,8 @@ function Answer(guess) {
         response = "<p class='h4'> Incorrect, sorry :( .";
     }
     currentQuestion++;
-    response += " The answer was " + answer + ".</p><p class='h4'>" + "Your score is currently " + score + ".</p>";
+    response += " The answer was " + answer + ".</p><p class='h4'>" + "Your score is currently " +
+        score + ".</p>";
     document.getElementById('game').innerHTML = response;
     document.getElementById("next").style.display = "inline-block";
 }
