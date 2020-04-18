@@ -3,7 +3,8 @@ p {
 }
 
 div {
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #next {
@@ -11,9 +12,15 @@ div {
 }
 
 #start {
-    display: block;
+    display: inline-block;
 }
 
 #replay {
     display: none;
 }
+
+.game1 {
+    text-align: center;
+}
+
+button {}

@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="styles.css">
     <script src="input.js"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <button id="start" onclick="Start()">Start?</button>
-    <div id="game">
+    <div class="game1">
+        <button id="start" class="btn btn-primary btn-lg" onclick="Start()">Start?</button>
+        <div id="game">
+        </div>
+        <button class="btn btn-primary" id="next" onclick="Next()">Next</button>
+        <button class="btn btn-primary" id="replay" onclick="Replay()">Play again?</button>
     </div>
-    <button id="next" onclick="Next()">Next</button>
-    <button id="replay" onclick="Replay()">Play again?</button>
 </body>
 
 </html>
