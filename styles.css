@@ -1,3 +1,19 @@
 p {
     color: blue;
 }
+
+div {
+    margin-bottom: 20px;
+}
+
+#next {
+    display: none;
+}
+
+#start {
+    display: block;
+}
+
+#replay {
+    display: none;
+}
