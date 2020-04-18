@@ -5,15 +5,13 @@ function Replay() {
     currentQuestion = 0;
     score = 0;
     document.getElementById("replay").style.display = "none";
-    Next()
+    Question()
 }
 
-function Start() {
-    document.getElementById("start").style.display = "none";
-    Next();
-}
-
-function Next() {
+function Question() {
+    if (currentQuestion == 0) {
+        document.getElementById("start").style.display = "none";
+    }
     document.getElementById("next").style.display = "none";
     var content = ""
     if (currentQuestion < words.length) {
