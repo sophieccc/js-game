@@ -59,7 +59,6 @@ function processTextFile() {
     file.overrideMimeType('text/plain; charset=UTF-8');
     file.onreadystatechange = function() {
         if (file.readyState === 4) {
-            console.log(file.responseText);
             var lines = file.responseText.split('\n');
             for (var i = 0; i < lines.length - 1; i++) {
                 var outputs = lines[i].split(',');
