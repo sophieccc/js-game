@@ -1,6 +1,35 @@
 var currentQuestion = 0;
 var score = 0;
 
+function Start() {
+    var startButton = document.getElementById("start");
+    startButton.parentNode.removeChild(startButton);
+
+    var statement = document.createElement("p");
+    var optionOne = document.createElement("button");
+    var optionTwo = document.createElement("button");
+    var optionThree = document.createElement("button");
+
+    optionOne.classList = "btn btn-primary";
+    optionTwo.classList = "btn btn-primary";
+    optionThree.classList = "btn btn-primary";
+    optionOne.setAttribute("onclick", "Answer(0)");
+    optionTwo.setAttribute("onclick", "Answer(1)");
+    optionThree.setAttribute("onclick", "Answer(2)");
+    optionOne.id = "one";
+    optionTwo.id = "two";
+    optionThree.id = "three";
+    statement.id = "statement";
+
+    var parent = document.getElementById("game");
+    parent.appendChild(statement)
+    parent.appendChild(optionOne);
+    parent.appendChild(optionTwo);
+    parent.appendChild(optionThree);
+
+    Question();
+}
+
 function Replay() {
     currentQuestion = 0;
     score = 0;
@@ -9,27 +38,20 @@ function Replay() {
 }
 
 function Question() {
-    if (currentQuestion == 0) {
-        document.getElementById("start").style.display = "none";
-    }
     document.getElementById("next").style.display = "none";
-    var content
+    var statement = document.getElementById("statement");
     if (currentQuestion < words.length) {
-        var question = "<p class='h4'> Guess the french word for " +
-            words[currentQuestion].english + "</p>";
-        var option_one = "<div id='options'><button class='btn btn-primary' onclick='Answer(0)'>" +
-            words[currentQuestion].french_options[0] + "</button> ";
-        var option_two = "<button class='btn btn-primary' onclick='Answer(1)'> " +
-            words[currentQuestion].french_options[1] + "</button> ";
-        var option_three = "<button class='btn btn-primary' onclick='Answer(2)'> " +
-            words[currentQuestion].french_options[2] + " </button> </div> ";
-        content = question + option_one + option_two + option_three;
+        statement.textContent = "Guess the french word for " + words[currentQuestion].english + " .";
+        document.getElementById("one").innerText = words[currentQuestion].french_options[0];
+        document.getElementById("two").innerText = words[currentQuestion].french_options[1];
+        document.getElementById("three").innerText = words[currentQuestion].french_options[2];
     } else {
-        content = "<p class='h4'>You finished the game! You got a total score of " + score +
-            " out of " + currentQuestion + ".</p>";
+        var result = document.createElement("p");
+        statement.textContent = "You finished the game! You got a total score of " + score +
+            " out of " + currentQuestion + ".";
+
         document.getElementById("replay").style.display = "inline-block";
     }
-    document.getElementById('game').innerHTML = content;
 }
 
 function Answer(guess) {
