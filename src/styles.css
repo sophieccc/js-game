@@ -8,6 +8,10 @@ body {
     background-size: cover;
 }
 
+a:any-link {
+    color: navy;
+}
+
 .centred {
     position: fixed;
     top: 35%;
@@ -15,15 +19,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.choice {
+    display: inline-block;
+}
+
 #statement {
     white-space: pre;
 }
 
-#options {
-    display: none;
-}
-
-#text-game {
+.originally-hidden {
     display: none;
 }
 
@@ -33,12 +37,4 @@ body {
 
 #next {
     display: none;
-}
-
-.choice {
-    display: inline-block;
-}
-
-a:any-link {
-    color: navy;
 }
