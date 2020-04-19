@@ -68,8 +68,16 @@ function Question() {
             document.getElementById("text-game").style.display = "inline-block";
         }
     } else {
+        var commentary;
+        if (score < 3) {
+            commentary = "You should keep practising..."
+        } else if (score < 5) {
+            commentary = "You're making good progress!"
+        } else {
+            commentary = "You're practically fluent!"
+        }
         statement.textContent = "Game over! You got " +
-            score + " out of " + currentQuestion + " correct.\r\n Play again?";
+            score + " out of " + currentQuestion + " correct.\r\n " + commentary + "\r\n\r\nPlay again?";
         document.getElementById("start").style.display = "inline-block";
     }
 }
