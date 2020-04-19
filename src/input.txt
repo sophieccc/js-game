@@ -1,9 +1,30 @@
 easy,book,livre,livre,ouvrage,cahier
 easy,house,maison,chambre,habitation,maison
 easy,happy,heureux,triste,heureux,fière
+easy,small,petit,grand,faible,petit
+easy,pen,stylo,crayon,stylo,papier
+easy,door,porte,porte,mur,chaise
+easy,to be,être,avoir,aller,être
+easy,tree,arbre,fleur,arbre,herbe
+easy,car,voiture,voiture,vélo,avion
+easy,from,de,sans,de,avec
 medium,teacher,enseignant,étudiant,enseignant,apprentissage
 medium,wise,sage,vif,sage,sensé
 medium,university,université,université,collège,lycée
-hard,accommodate,loger,accommoder,recevoir,loger
+medium,computer,ordinateur,portable,ordinateur,technique
+medium,screen,écran,soleil,papier,écran
+medium,to want,vouloir,vouloir,aimer,devoir
+medium,to have,avoir,devoir,avoir,aller
+medium,since,depuis,après,avant,depuis
+medium,curtain,rideau,volet,tapis,rideau
+medium,before,avant,avant,après,pendant
+hard,to accommodate,loger,accommoder,recevoir,loger
 hard,character,personnage,caractère,personnage,identité
 hard,squirrel,écureuil,renard,hérisson,écureuil
+hard,travel,voyage,voyage,travail,marche
+hard,coding language,langage,langue,langage,programme
+hard,scale,échelle,échelle,importance,adage
+hard,cog,rouage,appareil,fer,rouage
+hard,challenge,défi,échec,défi,tiers
+hard,encrypted,chiffré,mélangé,chiffré,caché
+hard,heat,chaleur,chaleur,humidité,chaud
