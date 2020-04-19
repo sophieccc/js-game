@@ -3,6 +3,9 @@ var score;
 var words = [];
 var gameMode;
 
+/* This is called for initial set-up each time you play the game. 
+It retrieves the difficulty and game mode that the player has chosen 
+and acts accordingly */
 function Start() {
     currentQuestion = 0;
     score = 0;
@@ -16,6 +19,9 @@ function Start() {
     Question();
 }
 
+/* This makes sure that there are no repeat questions within games, 
+while also randomising which questions are picked so that there is 
+variety in the questions asked and in their order */
 function getRandomisedWords(allWords) {
     words = [];
     numbers = []
@@ -30,6 +36,9 @@ function getRandomisedWords(allWords) {
     }
 }
 
+/* This retrieves and processes the text file containing the questions. 
+If the question is of the required difficulty level, it is pushed
+to an array of question objects */
 function processTextFile(difficulty) {
     var allWords = [];
     var file = new XMLHttpRequest();
@@ -54,6 +63,10 @@ function processTextFile(difficulty) {
     return allWords;
 }
 
+/* This sets up and displays the question-and-answer part of the game. 
+In the case of the options mode, the 3 options are loaded into their respective buttons. 
+If all of the questions have been asked, the game is ended. Based on the players score, 
+different commentary is output. An option is given to replay */
 function Question() {
     document.getElementById("next").style.display = "none";
     var statement = document.getElementById("statement");
@@ -63,7 +76,7 @@ function Question() {
             document.getElementById("one").innerText = words[currentQuestion].french_options[0];
             document.getElementById("two").innerText = words[currentQuestion].french_options[1];
             document.getElementById("three").innerText = words[currentQuestion].french_options[2];
-            document.getElementById("options").style.display = "block";
+            document.getElementById("options-game").style.display = "block";
         } else if (gameMode == 1) {
             document.getElementById("text-game").style.display = "inline-block";
         }
@@ -81,7 +94,7 @@ function Question() {
         document.getElementById("start").style.display = "inline-block";
     }
 }
-
+// This retrieves the text input and sends it to Answer()
 function sendTextAnswer() {
     var input = document.getElementById("text-input").value;
     document.getElementById("text-input").value = "";
@@ -89,12 +102,15 @@ function sendTextAnswer() {
 
 }
 
+/* This checks if the guess parameter is the correct answer. 
+Based on the result, different messages are output. A link is given to 
+the wordreference dictionary page for the correct french word */
 function Answer(guess) {
     var answer = words[currentQuestion].answer;
     var resultMessage;
     var statement = document.getElementById("statement");
     if (gameMode == 0) {
-        document.getElementById("options").style.display = "none";
+        document.getElementById("options-game").style.display = "none";
         guess = words[currentQuestion].french_options[guess]
     } else if (gameMode == 1) {
         document.getElementById("text-game").style.display = "none";
