@@ -91,13 +91,14 @@ function Answer(guess) {
     } else if (gameMode == 1) {
         document.getElementById("text-game").style.display = "none";
     }
+    var answerRef = "https://www.wordreference.com/fren/" + answer;
     if (guess == answer) {
-        resultMessage = "Correct! The answer was '" + answer + "'.";
+        resultMessage = "Correct!\r\n The answer was '";
         score++;
     } else {
-        resultMessage = "Incorrect, sorry. The answer was '" + answer + "'.";
+        resultMessage = "Incorrect, sorry.\r\n The answer was '";
     }
-    statement.textContent = resultMessage;
+    statement.innerHTML = resultMessage + '<a target="_blank" href="' + answerRef + '">' + answer + '</a>' + "'.";
     currentQuestion++;
     document.getElementById("next").style.display = "inline-block";
 }

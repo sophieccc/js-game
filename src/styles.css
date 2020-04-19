@@ -10,7 +10,7 @@ body {
 
 .centred {
     position: fixed;
-    top: 33%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -37,4 +37,8 @@ body {
 
 .choice {
     display: inline-block;
+}
+
+a:any-link {
+    color: navy;
 }
