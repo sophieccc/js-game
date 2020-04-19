@@ -23,12 +23,12 @@ a:any-link {
     display: inline-block;
 }
 
-#statement {
-    white-space: pre;
-}
-
 .originally-hidden {
     display: none;
+}
+
+#statement {
+    white-space: pre;
 }
 
 #text-input {
