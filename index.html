@@ -20,30 +20,32 @@
         <p id="statement" class="h4">Pick a difficulty & game mode and begin!</p>
         <div id="start">
             <div>
-                <p class="choice h5">Difficulty:</p> <select id="difficulty">
+                <p class="choice h5">Difficulty:</p>
+                <select id="difficulty">
                 <option>easy</option>
                 <option>medium</option>
                 <option>hard</option>
               </select>
             </div>
             <div>
-                <p class="choice h5">Game Mode:</p> <select id="game-choice">
+                <p class="choice h5">Game Mode:</p>
+                <select id="game-choice">
                 <option>choose from options</option>
                 <option>type your answer</option>
               </select>
             </div>
-            <button class="btn btn-primary btn-lg" onclick="Start()">Start</button>
+            <button class="btn btn-primary btn-lg" onclick="startGame()">Start</button>
         </div>
         <div id="options-game" class="originally-hidden">
-            <button class="btn btn-primary" id="one" onclick="Answer(0)"></button>
-            <button class="btn btn-primary" id="two" onclick="Answer(1)"></button>
-            <button class="btn btn-primary" id="three" onclick="Answer(2)"></button>
+            <button class="btn btn-primary" id="one" onclick="answerQuestion(0)"></button>
+            <button class="btn btn-primary" id="two" onclick="answerQuestion(1)"></button>
+            <button class="btn btn-primary" id="three" onclick="answerQuestion(2)"></button>
         </div>
         <div id="text-game" class="originally-hidden">
             <input class="form-control" type="text" id="text-input" />
             <button class="btn btn-primary" id="text-button" onclick="sendTextAnswer()">submit</button>
         </div>
-        <button class="btn btn-primary" id="next" onclick="Question()">Next</button>
+        <button class="btn btn-primary" id="next" onclick="askQuestion()">Next</button>
     </div>
 </body>
 
