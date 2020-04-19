@@ -17,15 +17,23 @@
 
 <body>
     <div class="centred">
-        <button id="start" class="btn btn-primary btn-lg " onclick="Start() ">Start?</button>
-        <p id="statement" class="h4"></p>
-        <div id="options">
-            <button class="btn btn-primary " id="one" onclick="Answer(0) "></button>
-            <button class="btn btn-primary" id="two" onclick="Answer(1) "></button>
-            <button class="btn btn-primary" id="three" onclick="Answer(2) "></button>
+        <p id="statement" class="h4">Pick a difficulty level and begin!</p>
+        <div id="start">
+            <div>
+                <select id="difficulty">
+                <option>easy</option>
+                <option>medium</option>
+                <option>hard</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-lg" onclick="Start()">Start</button>
         </div>
-        <button class="btn btn-primary " id="next" onclick="Question() ">Next</button>
-        <button class="btn btn-primary " id="replay" onclick="Replay() ">Play again?</button>
+        <div id="options">
+            <button class="btn btn-primary" id="one" onclick="Answer(0)"></button>
+            <button class="btn btn-primary" id="two" onclick="Answer(1)"></button>
+            <button class="btn btn-primary" id="three" onclick="Answer(2)"></button>
+        </div>
+        <button class="btn btn-primary" id="next" onclick="Question()">Next</button>
     </div>
 </body>
 

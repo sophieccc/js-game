@@ -1,5 +1,9 @@
-book,livre,livre,ouvrage,cahier
-house,maison,chambre,habitation,maison
-university,université,université,collège,lycée
-happy,heureux,triste,heureux,fière
-teacher,enseignant,étudiant,enseignant,apprentissage
+easy,book,livre,livre,ouvrage,cahier
+easy,house,maison,chambre,habitation,maison
+easy,happy,heureux,triste,heureux,fière
+medium,teacher,enseignant,étudiant,enseignant,apprentissage
+medium,wise,sage,vif,sage,sensé
+medium,university,université,université,collège,lycée
+hard,accommodate,loger,accommoder,recevoir,loger
+hard,character,personnage,caractère,personnage,identité
+hard,squirrel,écureuil,renard,hérisson,écureuil
