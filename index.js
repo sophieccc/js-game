@@ -56,7 +56,7 @@ function Answer(guess) {
 function processTextFile() {
     var file = new XMLHttpRequest();
     file.open("GET", "input.txt", false);
-    file.overrideMimeType('text/plain; charset=x-user-defined');
+    file.overrideMimeType('text/plain; charset=UTF-8');
     file.onreadystatechange = function() {
         if (file.readyState === 4) {
             console.log(file.responseText);
