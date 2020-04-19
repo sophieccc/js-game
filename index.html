@@ -17,13 +17,19 @@
 
 <body>
     <div class="centred">
-        <p id="statement" class="h4">Pick a difficulty level and begin!</p>
+        <p id="statement" class="h4">Pick a difficulty & game type and begin!</p>
         <div id="start">
             <div>
-                <select id="difficulty">
+                <p class="choice h5">Difficulty:</p> <select id="difficulty">
                 <option>easy</option>
                 <option>medium</option>
                 <option>hard</option>
+              </select>
+            </div>
+            <div>
+                <p class="choice h5">Game Mode:</p> <select id="game-choice">
+                <option>options game</option>
+                <option>text input game</option>
               </select>
             </div>
             <button class="btn btn-primary btn-lg" onclick="Start()">Start</button>
@@ -33,7 +39,11 @@
             <button class="btn btn-primary" id="two" onclick="Answer(1)"></button>
             <button class="btn btn-primary" id="three" onclick="Answer(2)"></button>
         </div>
-        <button class="btn btn-primary" id="next" onclick="Question()">Next</button>
+        <div id="text-game">
+            <input class="form-control" type="text" id="text-input" />
+            <button class="btn btn-primary" id="text-button" onclick="sendTextAnswer()">submit</button>
+        </div>
+        <button class=" btn btn-primary " id="next" onclick="Question()">Next</button>
     </div>
 </body>
 

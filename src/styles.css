@@ -23,6 +23,18 @@ body {
     display: none;
 }
 
+#text-game {
+    display: none;
+}
+
+#text-input {
+    margin-bottom: 10px;
+}
+
 #next {
     display: none;
+}
+
+.choice {
+    display: inline-block;
 }
