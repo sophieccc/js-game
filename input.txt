@@ -1,0 +1,5 @@
+book,livre,livre,ouvrage,cahier
+house,maison,chambre,habitation,maison
+university,université,université,collège,lycée
+happy,heureux,triste,heureux,fière
+teacher,enseignant,étudiant,enseignant,apprentissage

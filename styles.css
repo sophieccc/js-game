@@ -7,28 +7,23 @@ div {
     margin-bottom: 10px;
 }
 
-#next {
-    display: none;
+body {
+    text-align: center;
+    background-image: url('export.png');
+    background-size: cover;
 }
 
 #start {
     display: inline-block;
 }
 
-#replay {
-    display: none;
-}
-
-.game1 {
-    text-align: center;
-    background-image: url('export.png');
-    background-size: cover;
-}
-
 .centred {
     position: fixed;
     top: 33%;
     left: 50%;
-    /* bring your own prefixes */
     transform: translate(-50%, -50%);
+}
+
+#game button {
+    display: none;
 }
