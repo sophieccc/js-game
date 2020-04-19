@@ -3,54 +3,11 @@ var score = 0;
 var words = [];
 
 function Start() {
+    processTextFile();
     var startButton = document.getElementById("start");
     startButton.parentNode.removeChild(startButton);
-    processTextFile();
+    document.getElementById("statement").style.display = "block";
     Question();
-}
-
-function Replay() {
-    currentQuestion = 0;
-    score = 0;
-    document.getElementById("replay").style.display = "none";
-    Question();
-}
-
-function Question() {
-    document.getElementById("next").style.display = "none";
-
-    var statement = document.getElementById("statement");
-    if (currentQuestion < words.length) {
-        statement.textContent = "Guess the french word for " + words[currentQuestion].english + ".";
-        for (let element of document.getElementsByClassName("option")) {
-            element.style.display = "inline-block";
-        }
-        document.getElementById("one").innerText = words[currentQuestion].french_options[0];
-        document.getElementById("two").innerText = words[currentQuestion].french_options[1];
-        document.getElementById("three").innerText = words[currentQuestion].french_options[2];
-    } else {
-        statement.textContent = "You finished the game! You got a total score of " +
-            score + " out of " + currentQuestion + ".";
-        document.getElementById("replay").style.display = "inline-block";
-    }
-}
-
-function Answer(guess) {
-    for (let element of document.getElementsByClassName("option")) {
-        element.style.display = "none";
-    }
-    var answer = words[currentQuestion].answer;
-    var resultMessage;
-    var statement = document.getElementById("statement");
-    if (words[currentQuestion].french_options[guess] == answer) {
-        resultMessage = "Correct!";
-        score++;
-    } else {
-        resultMessage = "Incorrect, sorry :( .";
-    }
-    currentQuestion++;
-    statement.textContent = resultMessage + " The answer was " + answer + ".";
-    document.getElementById("next").style.display = "inline-block";
 }
 
 function processTextFile() {
@@ -71,4 +28,44 @@ function processTextFile() {
         }
     }
     file.send();
+}
+
+function Question() {
+    document.getElementById("next").style.display = "none";
+    var statement = document.getElementById("statement");
+
+    if (currentQuestion < words.length) {
+        statement.textContent = "Guess the french word for " + words[currentQuestion].english + ".";
+        document.getElementById("one").innerText = words[currentQuestion].french_options[0];
+        document.getElementById("two").innerText = words[currentQuestion].french_options[1];
+        document.getElementById("three").innerText = words[currentQuestion].french_options[2];
+        document.getElementById("options").style.display = "block";
+    } else {
+        statement.textContent = "You finished the game! You got a total score of " +
+            score + " out of " + currentQuestion + ".";
+        document.getElementById("replay").style.display = "inline-block";
+    }
+}
+
+function Answer(guess) {
+    var answer = words[currentQuestion].answer;
+    var resultMessage;
+    var statement = document.getElementById("statement");
+    if (words[currentQuestion].french_options[guess] == answer) {
+        resultMessage = "Correct! The answer was " + answer + ".";
+        score++;
+    } else {
+        resultMessage = "Incorrect, sorry. The answer was " + answer + ".";
+    }
+    statement.textContent = resultMessage;
+    currentQuestion++;
+    document.getElementById("options").style.display = "none";
+    document.getElementById("next").style.display = "inline-block";
+}
+
+function Replay() {
+    currentQuestion = 0;
+    score = 0;
+    document.getElementById("replay").style.display = "none";
+    Question();
 }

@@ -1,7 +1,3 @@
-p {
-    color: blue;
-}
-
 div {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -13,10 +9,6 @@ body {
     background-size: cover;
 }
 
-#start {
-    display: inline-block;
-}
-
 .centred {
     position: fixed;
     top: 33%;
@@ -24,6 +16,18 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#game button {
+#statement {
+    display: none;
+}
+
+#options {
+    display: none;
+}
+
+#next {
+    display: none;
+}
+
+#replay {
     display: none;
 }
