@@ -22,7 +22,7 @@ hard,to accommodate,loger,accommoder,recevoir,loger
 hard,character,personnage,caractère,personnage,identité
 hard,squirrel,écureuil,renard,hérisson,écureuil
 hard,travel,voyage,voyage,travail,marche
-hard,coding language,langage,langue,langage,programme
+hard,(coding) language,langage,langue,langage,programme
 hard,scale,échelle,échelle,importance,adage
 hard,cog,rouage,appareil,fer,rouage
 hard,challenge,défi,échec,défi,tiers
