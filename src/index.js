@@ -29,7 +29,6 @@ function getRandomisedQuestions(allQuestions) {
         var rand = Math.floor(Math.random() * allQuestions.length);
         if (numbers.indexOf(rand) === -1) {
             numbers.push(rand);
-            console.log(rand);
         }
     }
     for (var i = 0; i < 5; i++) {
