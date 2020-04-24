@@ -26,9 +26,10 @@ function getRandomisedQuestions(allQuestions) {
     questions = [];
     numbers = []
     while (numbers.length < 5) {
-        var rand = Math.floor(Math.random() * 9) + 1;
+        var rand = Math.floor(Math.random() * allQuestions.length);
         if (numbers.indexOf(rand) === -1) {
             numbers.push(rand);
+            console.log(rand);
         }
     }
     for (var i = 0; i < 5; i++) {
